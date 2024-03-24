@@ -48,82 +48,137 @@
         // myFunctionD();
 
 
-        //function declartion
-        function myFunA(x){        //x is formal argument / formal parameter
+        // //function declartion
+        // function myFunA(x){        //x is formal argument / formal parameter
+        //     //function body
+        //     return x;
+        // }
+        // //function calling
+        // // let val = myFunA('hello my friend, what are u doing???');       //actual argumnet / actual parameter
+        // // console.log(val);
+        // let val11 = myFunA('deepak',myFunA('hello my friend, what are u doing???'));
+        // console.log(val11);
+
+
+        // //function declartion
+        // function myFunctionA(n,m){      //formal argument / formal parameter
+        //     //function body
+        //     return n+m;
+        // }
+        // //function calling
+        // let value = myFunctionA(10,25);
+        // //function return and catch value by value
+        // console.log(value);
+
+        // let value1 = myFunctionA(10,myFunctionA(100,myFunctionA(1225,25)));
+        // console.log(value1);
+
+
+        // //function declartion
+        // function myFunB(y){     //y is formal argument / formal parameter
+        //     //function body
+        //     return y;
+        // }
+        // //function calling
+        // let val1 = myFunB('-fine bro');     //      actual argument / actual parameter
+        // console.log(val1);
+
+        // //function declartion
+        // function myFunC(b,d){   //formal argument / formal parameter
+        //     //function body
+        //     return b+d; // value return
+        // }
+        // //function calling
+        // let result = myFunC(150,225);   //actual argument / actual parameter
+        // console.log(result);    //function return catch value in result 
+
+        // //function declartion
+        // function funSub(f,l){   //formal argument / formal parameter
+        //     //function body
+        //     return f-l;
+        // }
+        // //function calling
+        // let result1 = funSub(255,123);  // actual argument / actual parameter
+        // console.log(result1);
+
+
+        // //function declartion
+        // function m(u){
+        //     //function body
+        //     return u;
+        // }
+        // //function calling
+        // let value12 = m(1025);
+        // console.log(value12,myFunctionA(12,myFunctionA(1000,value12)));     //function argument in deep nested form
+
+
+        // //function calling
+        // function b(j,k){        //formal argument / formal parament
+        //     //function body
+        //     return j*k;
+        // }
+        // //function calling
+        // let value2 = b(12,25);
+        // console.log(value2);
+
+        // let value3 = b(25,myFunctionA(25,myFunctionA(25,100)));
+        // console.log(value3);
+
+
+        // //function deffination
+        // function myFunB(x,y){   //x,y is formal argument and formal parameter
+        //     //function body
+        //     return x+y;
+        // }
+        // //function calling
+        // let result = myFunB(252,252);
+        // //function return may be somethings
+        // console.log(result);
+
+        // let result2 = myFunB(252,myFunB(100,myFunB(300,245)));
+        // //function return somethings
+        // console.log(result2);
+
+
+        //function defination
+        let myFunB = () =>{
             //function body
-            return x;
+            console.log('hello');
         }
         //function calling
-        // let val = myFunA('hello my friend, what are u doing???');       //actual argumnet / actual parameter
-        // console.log(val);
-        let val11 = myFunA('deepak',myFunA('hello my friend, what are u doing???'));
-        console.log(val11);
+        myFunB();
 
-
-        //function declartion
-        function myFunctionA(n,m){      //formal argument / formal parameter
+        //function defination
+        let f = (name) =>{      //formal argument / formal parameter
             //function body
-            return n+m;
+            console.log(`hey my friend, what is ur name?? ` +name);
         }
         //function calling
-        let value = myFunctionA(10,25);
-        //function return and catch value by value
-        console.log(value);
+        f("harry"); //actual argument / actual parameter
 
-        let value1 = myFunctionA(10,myFunctionA(100,myFunctionA(1225,25)));
-        console.log(value1);
-
-
-        //function declartion
-        function myFunB(y){     //y is formal argument / formal parameter
+        //function defination 
+        val = (a,b) => {
             //function body
-            return y;
+            return a+b;     //function return somethings
         }
         //function calling
-        let val1 = myFunB('-fine bro');     //      actual argument / actual parameter
-        console.log(val1);
+        let result= val(25,val(25,val(558,50)));    //function argument 
+        console.log(result)
 
-        //function declartion
-        function myFunC(b,d){   //formal argument / formal parameter
-            //function body
-            return b+d; // value return
+        let v = ['my ','is '];
+        let v1 = [...v,'devender ','sharma, '];
+        let v2 = [...v1,'hy ','nice '];
+        let v3 = [...v2,'to ','meet ','u '];
+
+        var para = ' ';
+        for(var i = 0 ; i < v3.length; i++){
+            console.log(v3[i]);
+            para = para + v3[i];
         }
-        //function calling
-        let result = myFunC(150,225);   //actual argument / actual parameter
-        console.log(result);    //function return catch value in result 
-
-        //function declartion
-        function funSub(f,l){   //formal argument / formal parameter
-            //function body
-            return f-l;
-        }
-        //function calling
-        let result1 = funSub(255,123);  // actual argument / actual parameter
-        console.log(result1);
-
-
-        //function declartion
-        function m(u){
-            //function body
-            return u;
-        }
-        //function calling
-        let value12 = m(1025);
-        console.log(value12,myFunctionA(12,myFunctionA(1000,value12)));     //function argument in deep nested form
-
-
-        //function calling
-        function b(j,k){        //formal argument / formal parament
-            //function body
-            return j*k;
-        }
-        //function calling
-        let value2 = b(12,25);
-        console.log(value2);
-
-        let value3 = b(25,myFunctionA(25,myFunctionA(25,100)));
-        console.log(value3);
-
-    </script>
+        console.log(para);
+        
+        
+        
+        </script>
 </body>
 </html>
