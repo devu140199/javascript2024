@@ -140,44 +140,148 @@
         // console.log(result2);
 
 
-        //function defination
-        let myFunB = () =>{
-            //function body
-            console.log('hello');
+    //     //function defination
+    //     let myFunB = () =>{
+    //         //function body
+    //         console.log('hello');
+    //     }
+    //     //function calling
+    //     myFunB();
+
+    //     //function defination
+    //     let f = (name) =>{      //formal argument / formal parameter
+    //         //function body
+    //         console.log(`hey my friend, what is ur name?? ` +name);
+    //     }
+    //     //function calling
+    //     f("harry"); //actual argument / actual parameter
+
+    //     //function defination 
+    //     val = (a,b) => {
+    //         //function body
+    //         return a+b;     //function return somethings
+    //     }
+    //     //function calling
+    //     let result= val(25,val(25,val(558,50)));    //function argument 
+    //     console.log(result)
+
+    //     let v = ['my ','is ','name '];
+    //     let v1 = [...v,'devender ','sharma, '];
+    //     let v2 = [...v1,'hi ','nice '];
+    //     let v3 = [...v2,'to ','meet ','u '];
+
+    //    console.log(v3);
+    //    let paragraph =" ";
+    //     //function defination
+    //     function myFunZ(){      //formal argument/formal parameter
+    //         for( var i=0; i<v3.length;i++){
+    //             //function body
+    //             console.log(v3[i]);
+    //             paragraph += v3[i];
+    //         }
+    //     }
+    //     //function calling
+    //     myFunZ();       //actual argument / actual parameter
+    //    console.log(paragraph);
+
+
+    //    //javascript object and array
+    //    var val2 = ['javascript',' is', ' programming', ' language'];        //js array
+    //    var val3=[...val2,' it',' is best', ' and', ' beautiful', ' language'];      //js array
+    //    console.log(val3);
+
+    //    var conti = '';
+    //    //function defination
+    //    function myVal3(){   //formal argument/formal parameter
+    //     //function body
+    //     for(var i=0; i<val3.length; i++){
+    //         //function body
+    //         console.log(val3[i]);
+    //         conti += val3[i];
+    //     }
+    //    }
+    //    //function calling
+    //    myVal3();
+    //    console.log(conti);
+
+    //    let examObject = {       //js object 
+    //     firstName : 'Kartik',
+    //     lastName : 'sharma',
+    //     sClass : '1st',
+    //     employee :[
+    //         {
+    //             name:'sanjay',
+    //             deptt:'store',
+    //             salary:52000    
+    //         }
+    //         // {
+    //         //     name:'depak',
+    //         //     deptt:'store',
+    //         //     salary : 29000
+    //         // }
+    //     ]
+    //    }
+    //    console.log(examObject.employee[0].salary);
+
+        //array is iterable
+        //object is not iterable
+
+
+        //object declartion
+        let common = {
+            car : 'vovle',
+            colour : 'red',
+            myFunctionA : function(){
+                console.log(this.car, this.colour);
+            }
+        }
+        common.myFunctionA();
+
+        let commonA = {
+            AA : 'hello my friends ',
+            BB : 'what is your name ',
+            // myFunC:function(){
+            //     console.log(this.AA + this.BB + "devender sharma");
+            // }
+            myFunC:()=>{
+                console.log(commonA.AA);
+            }
+        }
+        commonA.myFunC();
+        // commonA.myFunC();
+
+        let value = {
+            'school' : 'k l mehta dayanad public school ',
+            'principle' : 'vimal mehta ji',
+            myFunC : function(){
+                console.log(this.school + this.principle);
+            },
+            myFunD : () => {
+                console.log(value.principle);
+            }
+        }
+        value.myFunC();
+        value.myFunD();
+
+        //object declare
+        let value3 = {
+            name : ' devender sharma',
+            deptt : 'Production Planning And Control ',
+            companyName : 'Hindustan Syringes And Medical Devies Ltd.',
+            //function declartion
+            myFunctionCom : function(){
+                return this.companyName;
+            }
         }
         //function calling
-        myFunB();
+        let result = value3.myFunctionCom();
+        console.log(result);
 
-        //function defination
-        let f = (name) =>{      //formal argument / formal parameter
-            //function body
-            console.log(`hey my friend, what is ur name?? ` +name);
-        }
-        //function calling
-        f("harry"); //actual argument / actual parameter
+        //object calling 
+        //boject.member
+        console.log('My Name is '+value3.name+', working in deptt ' + value3.deptt+'Or compmay name ' +value3.companyName);
 
-        //function defination 
-        val = (a,b) => {
-            //function body
-            return a+b;     //function return somethings
-        }
-        //function calling
-        let result= val(25,val(25,val(558,50)));    //function argument 
-        console.log(result)
 
-        let v = ['my ','is '];
-        let v1 = [...v,'devender ','sharma, '];
-        let v2 = [...v1,'hy ','nice '];
-        let v3 = [...v2,'to ','meet ','u '];
-
-        var para = ' ';
-        for(var i = 0 ; i < v3.length; i++){
-            console.log(v3[i]);
-            para = para + v3[i];
-        }
-        console.log(para);
-        
-        
         
         </script>
 </body>
