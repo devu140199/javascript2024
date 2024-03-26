@@ -5,8 +5,79 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="image/fan_blade.png">
     <title>fan on and off state</title>
+
+    <style>
+        div{
+            width: 400px;
+            height: 400px;
+            background-size: cover;
+            margin: 100px auto;
+        }
+        .blade1{
+            animation-name: blade;
+            animation-duration: 1s;
+            animation-timing-function: linear;
+            animation-iteration-count: infinite;
+        }
+        @keyframes blade{
+            0%{
+                transform: rotateZ(0deg);
+            }
+            100%{
+                transform: rotateZ(359deg);
+            }
+        }
+        div > button{
+            cursor: pointer;
+        }
+
+    </style>
+    <script>
+        function x(elem){
+            //function retun somthings
+            return document.getElementById(elem);
+        }
+        function y(element){
+            //function retun somthings
+            return document.querySelector(element);
+        }
+
+        //function Defination
+        function myFuncA(speed){
+            //function body
+            if(speed == 'stop'){
+                x('fanblade').style.animationPlayState ='paused';
+            }   else {
+                if(speed == 1){
+                    x('fanblade').style.animationPlayState = 'running';
+                    x('fanblade').style.animationDuration = '5s';
+                }   else {
+                    if(speed == 2){
+                        y('.blade1').style.animationPlayState = 'running';
+                        y('.blade1').style.animationDuration = '2s'
+                    }   else {
+                        y('.blade1').style.animationPlayState = 'running';
+                        y('.blade1').style.animationDuration = '1s';
+                    }
+                }
+            }
+        }
+
+    </script>
 </head>
 <body>
-    
+    <div  class="blade1" id="fanblade" style="background-image: url('image/fan_blade.png');">
+        <!-- <img src="image/fan_blade.png" alt="fan"> -->
+    </div>
+    <div style="text-align: center;">
+        <button onclick="myFuncA('stop')">stop</button>
+        <button onclick="myFuncA('1')">1</button>
+        <button onclick="myFuncA('2')">2</button>
+        <button onclick="myFuncA('3')">3</button>
+    </div>
+
+    <script>
+
+    </script>
 </body>
 </html>
